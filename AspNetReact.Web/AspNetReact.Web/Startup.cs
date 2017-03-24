@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using AspNetReact.Web.Data;
 using AspNetReact.Web.Data.Models;
 using AspNetReact.Web.Identity.Services;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace AspNetReact.Web
 {
@@ -60,13 +61,18 @@ namespace AspNetReact.Web
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
-                app.UseBrowserLink();
-            }
-            else
+			if (env.IsDevelopment())
+			{
+				app.UseDeveloperExceptionPage();
+
+				// Add WebpackDevMiddleware:
+				app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+				{
+					HotModuleReplacement = true,
+					ReactHotModuleReplacement = true
+				});
+			}
+			else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
