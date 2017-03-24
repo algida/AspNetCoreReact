@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetReact.Web.Models.AccountViewModels
+namespace AspNetReact.Web.Identity.Models.AccountViewModels
 {
     public class VerifyCodeViewModel
     {

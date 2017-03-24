@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetReact.Web.Services
+namespace AspNetReact.Web.Identity.Services
 {
     public interface ISmsSender
     {

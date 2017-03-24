@@ -4,10 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetReact.Web.Models.ManageViewModels
+namespace AspNetReact.Web.Identity.Models.ManageViewModels
 {
-    public class AddPhoneNumberViewModel
+    public class VerifyPhoneNumberViewModel
     {
+        [Required]
+        public string Code { get; set; }
+
         [Required]
         [Phone]
         [Display(Name = "Phone number")]

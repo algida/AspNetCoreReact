@@ -10,8 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using AspNetReact.Web.Data;
-using AspNetReact.Web.Models;
-using AspNetReact.Web.Services;
+using AspNetReact.Web.Data.Models;
+using AspNetReact.Web.Identity.Services;
 
 namespace AspNetReact.Web
 {

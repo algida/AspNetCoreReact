@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetReact.Web.Models.ManageViewModels
+namespace AspNetReact.Web.Identity.Models.ManageViewModels
 {
     public class FactorViewModel
     {

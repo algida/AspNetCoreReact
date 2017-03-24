@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using AspNetReact.Web.Models;
+using AspNetReact.Web.Data.Models;
 
 namespace AspNetReact.Web.Data
 {

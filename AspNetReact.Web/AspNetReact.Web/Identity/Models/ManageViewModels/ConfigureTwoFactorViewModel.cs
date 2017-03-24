@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace AspNetReact.Web.Models.ManageViewModels
+namespace AspNetReact.Web.Identity.Models.ManageViewModels
 {
     public class ConfigureTwoFactorViewModel
     {

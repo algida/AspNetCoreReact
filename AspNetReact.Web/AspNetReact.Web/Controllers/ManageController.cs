@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using AspNetReact.Web.Models;
-using AspNetReact.Web.Models.ManageViewModels;
-using AspNetReact.Web.Services;
+using AspNetReact.Web.Data.Models;
+using AspNetReact.Web.Identity.Models.ManageViewModels;
+using AspNetReact.Web.Identity.Services;
 
 namespace AspNetReact.Web.Controllers
 {

@@ -9,9 +9,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using AspNetReact.Web.Models;
-using AspNetReact.Web.Models.AccountViewModels;
-using AspNetReact.Web.Services;
+using AspNetReact.Web.Identity.Models;
+using AspNetReact.Web.Identity.Models.AccountViewModels;
+using AspNetReact.Web.Identity.Services;
+using AspNetReact.Web.Data.Models;
 
 namespace AspNetReact.Web.Controllers
 {
