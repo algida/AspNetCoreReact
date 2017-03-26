@@ -11,5 +11,6 @@ namespace AspNetReact.Contract.Repositories
 		ProjectDto GetById(int id);
 		ProjectDto GetByName(string projectName);
 		void Add(AddProjectDto project);
+		void Delete(int id);
 	}
 }

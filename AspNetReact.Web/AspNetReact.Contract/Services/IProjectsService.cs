@@ -12,5 +12,6 @@ namespace AspNetReact.Contract.Services
 		CommonResult<ProjectDto> GetById(int id);
 
 		CommonResult Add(AddProjectDto project);
+		void Delete(int id);
 	}
 }

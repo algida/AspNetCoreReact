@@ -8,9 +8,10 @@ using AspNetReact.DataAccess;
 namespace AspNetReact.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170326141803_AddedProjectNameIsRequired")]
+    partial class AddedProjectNameIsRequired
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
@@ -78,8 +79,7 @@ namespace AspNetReact.DataAccess.Migrations
                     b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250);
+                        .IsRequired();
 
                     b.HasKey("Id");
 
