@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using AspNetReact.Web.Data;
-using AspNetReact.Web.Data.Models;
 using AspNetReact.Web.Identity.Services;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using AspNetReact.DataAccess;
+using AspNetReact.DataAccess.Models;
 
 namespace AspNetReact.Web
 {

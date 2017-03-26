@@ -12,7 +12,7 @@ using Microsoft.Extensions.Options;
 using AspNetReact.Web.Identity.Models;
 using AspNetReact.Web.Identity.Models.AccountViewModels;
 using AspNetReact.Web.Identity.Services;
-using AspNetReact.Web.Data.Models;
+using AspNetReact.DataAccess.Models;
 
 namespace AspNetReact.Web.Controllers
 {

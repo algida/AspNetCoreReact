@@ -3,9 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using AspNetReact.Web.Data;
 
-namespace AspNetReact.Web.Data.Migrations
+namespace AspNetReact.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20170324201649_AddedProjectEntity")]

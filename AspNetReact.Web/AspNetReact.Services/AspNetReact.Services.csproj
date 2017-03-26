@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetReact.Contract\AspNetReact.Contract.csproj" />
+    <ProjectReference Include="..\AspNetReact.DataAccess\AspNetReact.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

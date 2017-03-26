@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace AspNetReact.Web.Data
+namespace AspNetReact.Contract.DataContracts
 {
-	public class Project
+	public class ProjectDto
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }

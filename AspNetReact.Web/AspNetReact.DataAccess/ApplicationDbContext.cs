@@ -4,13 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using AspNetReact.Web.Data.Models;
+using AspNetReact.DataAccess.Models;
 
-namespace AspNetReact.Web.Data
+namespace AspNetReact.DataAccess
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+		public DbSet<Project> Projects { get; set; }
+		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }

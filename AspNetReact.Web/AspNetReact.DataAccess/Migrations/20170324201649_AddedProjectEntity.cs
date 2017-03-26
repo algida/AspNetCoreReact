@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace AspNetReact.Web.Data.Migrations
+namespace AspNetReact.DataAccess.Migrations
 {
     public partial class AddedProjectEntity : Migration
     {

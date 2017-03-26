@@ -34,5 +34,10 @@
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.0" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetReact.Contract\AspNetReact.Contract.csproj" />
+    <ProjectReference Include="..\AspNetReact.DataAccess\AspNetReact.DataAccess.csproj" />
+    <ProjectReference Include="..\AspNetReact.Services\AspNetReact.Services.csproj" />
+  </ItemGroup>
 
 </Project>

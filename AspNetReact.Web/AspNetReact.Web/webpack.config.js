@@ -49,7 +49,7 @@ const config = {
 						options: {
 							silent: true
 						}
-					},
+					}
 				]
 			},
 			{
@@ -80,7 +80,7 @@ const config = {
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: "commons",
-			filename: "commons.js",
+			filename: "commons.js"
 		}),
 		new webpack.SourceMapDevToolPlugin({
 			moduleFilenameTemplate: path.relative(paths.outputDir, '[resourcePath]')
