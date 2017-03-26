@@ -9,5 +9,7 @@ namespace AspNetReact.Contract.Repositories
 	{
 		List<ProjectDto> GetAll();
 		ProjectDto GetById(int id);
+		ProjectDto GetByName(string projectName);
+		void Add(AddProjectDto project);
 	}
 }

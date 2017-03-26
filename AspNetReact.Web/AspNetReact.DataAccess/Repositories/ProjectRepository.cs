@@ -44,5 +44,36 @@ namespace AspNetReact.DataAccess.Repositories
 				IsDeleted = project.IsDeleted
 			};
 		}
+
+		public ProjectDto GetByName(string projectName)
+		{
+			var existingProject = _dbContext.Projects.FirstOrDefault(x => x.Name.ToLower() == projectName.ToLower());
+
+			if (existingProject != null)
+			{
+				return new ProjectDto
+				{
+					Id = existingProject.Id,
+					Name = existingProject.Name,
+					Description = existingProject.Description,
+					IsDeleted = existingProject.IsDeleted,
+					CreationDate = existingProject.CreationDate
+				};
+			}
+
+			return null;
+		}
+
+		public void Add(AddProjectDto project)
+		{
+			_dbContext.Projects.Add(new Project
+			{
+				Name = project.Name,
+				Description = project.Description,
+				IsDeleted = false,
+				CreationDate = DateTime.Now
+			});
+			_dbContext.SaveChanges();
+		}
 	}
 }
