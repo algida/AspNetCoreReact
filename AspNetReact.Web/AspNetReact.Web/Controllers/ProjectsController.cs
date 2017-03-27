@@ -33,6 +33,7 @@ namespace AspNetReact.Web.Controllers
 		}
 
 		[HttpPost]
+		[ValidateAntiForgeryToken]
 		public IActionResult Add(ProjectCreateViewModel viewModel)
 		{
 			var result = _projectsService.Add(new AddProjectDto
@@ -50,6 +51,29 @@ namespace AspNetReact.Web.Controllers
 				viewModel.ErrorMessage = result.ErrorMessage;
 				return View(viewModel);
 			}
+		}
+
+		[HttpGet]
+		public IActionResult Details(int id)
+		{
+			var result = _projectsService.GetById(id);
+
+			return View(new ProjectViewModel()
+			{
+				Id = result.Item.Id,
+				Name = result.Item.Name,
+				Description = result.Item.Description,
+				CreationDate = result.Item.CreationDate
+			});
+		}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult Delete(int id)
+		{
+			_projectsService.Delete(id);
+
+			return RedirectToAction(nameof(ProjectsController.Index), "Projects");
 		}
 	}
 }

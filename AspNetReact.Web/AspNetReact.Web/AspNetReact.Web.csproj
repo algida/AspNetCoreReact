@@ -40,8 +40,5 @@
     <ProjectReference Include="..\AspNetReact.DataAccess\AspNetReact.DataAccess.csproj" />
     <ProjectReference Include="..\AspNetReact.Services\AspNetReact.Services.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Projects\" />
-  </ItemGroup>
 
 </Project>
