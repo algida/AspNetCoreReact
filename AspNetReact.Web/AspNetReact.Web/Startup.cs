@@ -13,6 +13,10 @@ using AspNetReact.Web.Identity.Services;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using AspNetReact.DataAccess;
 using AspNetReact.DataAccess.Models;
+using AspNetReact.Contract.Repositories;
+using AspNetReact.DataAccess.Repositories;
+using AspNetReact.Services.Services;
+using AspNetReact.Contract.Services;
 
 namespace AspNetReact.Web
 {
@@ -53,7 +57,11 @@ namespace AspNetReact.Web
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
-        }
+
+			//Scoped Project services
+			services.AddScoped<IProjectsRepository, ProjectsRepository>();
+			services.AddScoped<IProjectsService, ProjectsService>();
+		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

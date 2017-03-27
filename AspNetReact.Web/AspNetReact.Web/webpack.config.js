@@ -9,15 +9,14 @@ const paths = {
 
 const config = {
 	entry: {
-		// Bundles used on specific pages
-		homepage: './Frontend/Homepage/index.tsx',
-		// Common libraries
+		home: './Frontend/Home/home.scss',
+		projects: './Frontend/Projects/index.tsx',
 		libs: [
 			'bootstrap',
 			'bootstrap/dist/css/bootstrap.css',
+			'jquery',
 			'react',
-			'react-dom',
-			'jquery'
+			'react-dom'
 		]
 	},
 	output: {

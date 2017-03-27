@@ -8,12 +8,19 @@ namespace AspNetReact.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+		public IActionResult Index()
+		{
+			if (User.Identity.IsAuthenticated)
+			{
+				return RedirectToAction(nameof(ProjectsController.Index), "Projects");
+			}
+			else
+			{
+				return View();
+			}
+		}
 
-        public IActionResult About()
+		public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
 
