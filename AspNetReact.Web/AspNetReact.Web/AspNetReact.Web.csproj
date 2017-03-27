@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -40,7 +41,6 @@
     <ProjectReference Include="..\AspNetReact.Services\AspNetReact.Services.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Frontend\Shared\Components\" />
     <Folder Include="Views\Projects\" />
   </ItemGroup>
 

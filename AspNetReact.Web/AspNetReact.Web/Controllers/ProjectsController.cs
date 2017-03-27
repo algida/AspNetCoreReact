@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using AspNetReact.Contract.Services;
+using AspNetReact.Contract.DataContracts;
+using AspNetReact.Web.ViewModels;
 
 namespace AspNetReact.Web.Controllers
 {
@@ -22,6 +24,32 @@ namespace AspNetReact.Web.Controllers
 		public IActionResult Index()
 		{
 			return View();
+		}
+
+		[HttpGet]
+		public IActionResult Add()
+		{
+			return View(new ProjectCreateViewModel());
+		}
+
+		[HttpPost]
+		public IActionResult Add(ProjectCreateViewModel viewModel)
+		{
+			var result = _projectsService.Add(new AddProjectDto
+			{
+				Name = viewModel.Name,
+				Description = viewModel.Description
+			});
+
+			if (result.IsSuccess)
+			{
+				return RedirectToAction(nameof(ProjectsController.Index), "Projects");
+			}
+			else
+			{
+				viewModel.ErrorMessage = result.ErrorMessage;
+				return View(viewModel);
+			}
 		}
 	}
 }
