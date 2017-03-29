@@ -5,6 +5,9 @@ using AspNetReact.DataAccess.Repositories;
 using AspNetReact.Services.Services;
 using AspNetReact.Contract.DataContracts;
 using Microsoft.EntityFrameworkCore;
+using Moq;
+using System.Collections.Generic;
+using AspNetReact.Contract.Repositories;
 
 namespace AspNetReact.Tests
 {
@@ -65,6 +68,27 @@ namespace AspNetReact.Tests
 			{
 				Assert.AreEqual(1, context.Projects.Count());
 			}
+		}
+
+		[TestMethod]
+		public void GetAllMethodShouldReturnProjects()
+		{
+			var repositoryMock = new Mock<IProjectsRepository>();
+			repositoryMock.Setup(x => x.GetAll())
+							.Returns(new List<ProjectDto>
+							{
+						new ProjectDto
+						{
+							Name = "project_from_repository_mock"
+						}
+							});
+
+			var projectsService = new ProjectsService(repositoryMock.Object);
+
+			var result = projectsService.GetAll();
+
+			Assert.AreEqual(result.Count, 1);
+			Assert.AreEqual(result.First().Name, "project_from_repository_mock");
 		}
 	}
 }
