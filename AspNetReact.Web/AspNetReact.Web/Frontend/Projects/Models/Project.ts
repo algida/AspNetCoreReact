@@ -1,6 +1,6 @@
 ﻿export default class Project {
-	id: number;
-	name: string;
-	description: string;
-	creationDate: Date;
+	Id: number;
+	Name: string;
+	Description: string;
+	CreationDate: Date;
 }

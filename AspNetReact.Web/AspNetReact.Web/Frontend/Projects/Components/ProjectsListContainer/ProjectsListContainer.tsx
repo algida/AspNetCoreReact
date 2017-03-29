@@ -23,7 +23,7 @@ class ProjectsListContainer extends React.Component<any, ProjectsListContainerSt
 	}
 
 	public componentDidMount() {
-		fetch(this.paths.fetchAllProjects)
+		fetch(this.paths.fetchAllProjects, { credentials: 'include' })
 			.then((response) => {
 				return response.text();
 			})

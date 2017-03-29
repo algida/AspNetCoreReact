@@ -25,7 +25,7 @@ class ProjectsList extends React.Component<ProjectsListProps, any> {
 					<ProjectsListSummary projects={this.props.projects} />
 					{
 						this.props.projects.map(project => {
-							return <ProjectsListItem key={project.id} project={project} />
+							return <ProjectsListItem key={project.Id} project={project} />
 						})
 					}
 				</div>

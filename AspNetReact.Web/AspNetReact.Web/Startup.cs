@@ -17,6 +17,7 @@ using AspNetReact.Contract.Repositories;
 using AspNetReact.DataAccess.Repositories;
 using AspNetReact.Services.Services;
 using AspNetReact.Contract.Services;
+using Newtonsoft.Json.Serialization;
 
 namespace AspNetReact.Web
 {
@@ -52,10 +53,13 @@ namespace AspNetReact.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddMvc();
+			services.AddMvc().AddJsonOptions(options =>
+			{
+				options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+			});
 
-            // Add application services.
-            services.AddTransient<IEmailSender, AuthMessageSender>();
+			// Add application services.
+			services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
 
 			//Scoped Project services

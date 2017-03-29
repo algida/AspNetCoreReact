@@ -5,7 +5,7 @@ using AspNetReact.Contract.Services;
 namespace SoftwareHouse.Web.Controllers.API
 {
 	[Route("api/[controller]")]
-	//[Authorize]
+	[Authorize]
 	public class ProjectsController : Controller
 	{
 		private IProjectsService _projectsService;
